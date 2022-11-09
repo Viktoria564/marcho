@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 
   $('.top-slider__inner').slick({
     dots: true,
@@ -7,5 +7,12 @@ $(function(){
     autoplay: true,
     autoplaySpead: 2000
   });
-  
+
+  $(".star").rateYo({
+    starWidth: "16px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true
+  });
+
 });
