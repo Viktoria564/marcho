@@ -780,6 +780,11 @@
     display: block;
   }
 
+  &__label-checkbox {
+    margin-bottom: 15px;
+    display: block;
+  }
+
   &__input {
     width: 100%;
     height: 60px;
@@ -804,6 +809,10 @@
 
   &__error {
     color: $accent;
+  }
+
+  &__text {
+    margin-bottom: 25px;
   }
 }
 
