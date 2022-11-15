@@ -38,3 +38,56 @@ body {
   margin: 0 auto 50px;
 }
 
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    background-image: url('../images/icons/home-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: #727272;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background-image: url('../images/icons/angle-right.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 9px;
+      height: 10px;
+      margin-left: 14px;
+    }
+
+    &:last-child {
+      color: $accent;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
