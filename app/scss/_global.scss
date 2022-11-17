@@ -95,3 +95,48 @@ body {
 .header--404-page {
   background-color: $bg;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__prev::before {
+    background-image: url('../images/icons/angle_left.svg');
+    margin-right: 8px;
+  }
+
+  &__next::after {
+    background-image: url('../images/icons/angle_right.svg');
+    margin-left: 8px;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 40px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+}
